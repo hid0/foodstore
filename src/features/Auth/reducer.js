@@ -1,4 +1,5 @@
 import { USER_LOGIN, USER_LOGOUT } from "./constants";
+
 let initialState = localStorage.getItem("auth")
   ? JSON.parse(localStorage.getItem("auth"))
   : { user: null, token: null };

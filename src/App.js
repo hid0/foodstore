@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+
+import { Provider } from "react-redux";
+import "upkit/dist/style.min.css";
+
 import store from "./app/store";
 import Home from "./pages/Home";
-import "upkit/dist/style.min.css";
-import { Provider } from "react-redux";
+
 import { listen } from "./app/listener";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Register from "./pages/Register";
 
 function App() {
   useEffect(() => {
@@ -14,6 +18,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
+          <Route path="/register" component={Register} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
