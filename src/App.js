@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 
 import { listen } from "./app/listener";
 import Register from "./pages/Register";
+import RegisterSuccess from "./pages/RegisterSuccess";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
+          <Route path="/register/success" component={RegisterSuccess} />
           <Route path="/register" component={Register} />
           <Route path="/" component={Home} />
         </Switch>
